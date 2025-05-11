@@ -33,10 +33,10 @@ class Control(Interface):
         msg = adr + cmd + '\r'
         tx_msg = msg.encode()
         with serial.Serial(
-            port=self.port, 
-            baudrate=self.baud_rate, 
-            bytesize=serial.EIGHTBITS, 
-            parity=serial.PARITY_NONE, 
+            port=self.port,
+            baudrate=self.baud_rate,
+            bytesize=serial.EIGHTBITS,
+            parity=serial.PARITY_NONE,
             timeout=self.timeout
             ) as ser:
             ser.write(tx_msg)
@@ -46,10 +46,10 @@ class Control(Interface):
     def rx_cmd(self):
         """Receive the command over the serial bus"""
         with serial.Serial(
-            port=self.port, 
-            baudrate=self.baud_rate, 
-            bytesize=serial.EIGHTBITS, 
-            parity=serial.PARITY_NONE, 
+            port=self.port,
+            baudrate=self.baud_rate,
+            bytesize=serial.EIGHTBITS,
+            parity=serial.PARITY_NONE,
             timeout=self.timeout
             ) as ser:
             rx_msg = ser.readline().decode()
