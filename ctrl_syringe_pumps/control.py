@@ -1,5 +1,8 @@
+"""
+Control syringe pump(s) via serial communication (basic mode).
+"""
 import serial
-from interface import Interface
+from .interface import Interface
 
 DEFAULT_PORT = '/dev/tty.usbserial-10'
 
@@ -51,7 +54,3 @@ class Control(Interface):
             ) as ser:
             rx_msg = ser.readline().decode()
         return rx_msg
-
-
-if __name__=='__main__':
-    pass

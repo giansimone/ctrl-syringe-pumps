@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ctrl-syringe-pumps"
+version = "0.1.0"
+description = "Control syringe pump(s) via serial communication (basic mode)"
+authors = ["Giansimone Perrino <hello@giansimone.dev>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyserial = "^3.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
